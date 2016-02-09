@@ -12,5 +12,7 @@ mix deps.get
 mix escript.build
 
 Then you have new command to play with:
+
 ./beam_to_ex --beam beam_file.beam
+
 ./beam_to_ex --erl erlang_file.erl
