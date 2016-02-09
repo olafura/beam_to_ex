@@ -1,0 +1,10 @@
+/_build
+/cover
+/deps
+erl_crash.dump
+*.ez
+
+# Vim
+*~
+*.swp
+*.swo
