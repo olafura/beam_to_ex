@@ -1,0 +1,1 @@
+BeamToEx.main(System.argv())

@@ -5,6 +5,14 @@ code. There are a lot of codes to be mapped but it works with basic examples.
 
 This uses [beam_to_ex_ast](https://github.com/olafura/beam_to_ex_ast)
 
+## Temporary workaround
+
+There is some problem with the escript but you can use this workaround:
+
+mix run run.exs --beam beam_file.beam
+
+mix run run.exs --erl erlang_file.erl
+
 ## Installation
 
 mix deps.get

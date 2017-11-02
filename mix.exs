@@ -29,7 +29,7 @@ defmodule BeamToEx.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:beam_to_ex_ast, github: "olafura/beam_to_ex_ast"}
+      {:beam_to_ex_ast, "~> 0.3.0"}
     ]
   end
 end
