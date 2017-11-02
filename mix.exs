@@ -5,6 +5,7 @@ defmodule BeamToEx.Mixfile do
     [app: :beam_to_ex,
      version: "0.0.1",
      elixir: "~> 1.3-dev",
+     compilers: Mix.compilers ++ [:protocol_ex],
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      escript: [main_module: BeamToEx],
