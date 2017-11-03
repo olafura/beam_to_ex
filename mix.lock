@@ -1,3 +1,3 @@
-%{"beam_to_ex_ast": {:hex, :beam_to_ex_ast, "0.3.0", "e1436026d8b7af75c7a6ac27f91faa282115b14e1ef69a31e4b8e11ce3023607", [:mix], [{:forms, "~> 0.0.1", [hex: :forms, repo: "hexpm", optional: false]}, {:protocol_ex, "~> 0.3.0", [hex: :protocol_ex, repo: "hexpm", optional: false]}], "hexpm"},
+%{"beam_to_ex_ast": {:hex, :beam_to_ex_ast, "0.3.1", "111f49fb59595b60a2d69d667f0a7fd49b7c93d85895ac884d082b9cbf6ff3fc", [:mix], [{:forms, "~> 0.0.1", [hex: :forms, repo: "hexpm", optional: false]}, {:protocol_ex, ">= 0.3.12", [hex: :protocol_ex, repo: "hexpm", optional: false]}], "hexpm"},
   "forms": {:hex, :forms, "0.0.1", "45f3b10b6f859f95f2c2c1a1de244d63855296d55ed8e93eb0dd116b3e86c4a6", [:rebar3], [], "hexpm"},
-  "protocol_ex": {:hex, :protocol_ex, "0.3.11", "33a03bfe8234f1e95bb8b0f28c246b9ededd32c81b1877c62cb1352b85a855e1", [:mix], [], "hexpm"}}
+  "protocol_ex": {:hex, :protocol_ex, "0.3.12", "bcd1200b232c5ab07b2f2d50a82abd17011ade21954b5de0ae5a307e3203bd37", [:mix], [], "hexpm"}}

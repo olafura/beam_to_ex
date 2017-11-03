@@ -3,6 +3,7 @@
 /deps
 erl_crash.dump
 *.ez
+beam_to_ex
 
 # Vim
 *~
