@@ -30,7 +30,8 @@ defmodule BeamToEx.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:beam_to_ex_ast, "~> 0.3.0"}
+      # {:beam_to_ex_ast, "~> 0.3.0"}
+      {:beam_to_ex_ast, path: "../beam_to_ex_ast"}
     ]
   end
 end
