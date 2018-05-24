@@ -25,8 +25,8 @@ defmodule BeamToEx do
   end
 
   def make_pretty(ast) do
-    # ast = Regex.replace(~r/(def)\(([a-zA-Z0-9]+\([a-zA-Z0-9]*\))\)/, ast, "\\1 \\2")
-    # Regex.replace(~r/(defmodule)\(([a-zA-Z0-9]+)\)/, ast, "\\1 \\2")
-    Code.format_string!(ast)
+    ast = Regex.replace(~r/(def)\(([a-zA-Z0-9]+\([a-zA-Z0-9]*\))\)/, ast, "\\1 \\2")
+    Regex.replace(~r/(defmodule)\(([a-zA-Z0-9]+)\)/, ast, "\\1 \\2")
+    |> Code.format_string!()
   end
 end
