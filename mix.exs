@@ -2,14 +2,16 @@ defmodule BeamToEx.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :beam_to_ex,
-     version: "0.2.0",
-     elixir: "~> 1.3-dev",
-     compilers: Mix.compilers ++ [:protocol_ex],
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     escript: [main_module: BeamToEx],
-     deps: deps]
+    [
+      app: :beam_to_ex,
+      version: "0.2.0",
+      elixir: "~> 1.3-dev",
+      compilers: Mix.compilers() ++ [:protocol_ex],
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      escript: [main_module: BeamToEx],
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application
