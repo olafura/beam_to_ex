@@ -4,7 +4,7 @@ defmodule BeamToEx.Mixfile do
   def project do
     [
       app: :beam_to_ex,
-      version: "0.2.0",
+      version: "0.2.1",
       elixir: "~> 1.3-dev",
       compilers: Mix.compilers() ++ [:protocol_ex],
       build_embedded: Mix.env() == :prod,
