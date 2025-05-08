@@ -4,9 +4,9 @@ defmodule BeamToEx.Mixfile do
   def project do
     [
       app: :beam_to_ex,
-      version: "0.2.1",
+      version: "0.3.0",
       elixir: "~> 1.3-dev",
-      compilers: Mix.compilers() ++ [:protocol_ex],
+      compilers: Mix.compilers(),
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       escript: [main_module: BeamToEx],
@@ -32,7 +32,7 @@ defmodule BeamToEx.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:beam_to_ex_ast, "~> 0.3.0"}
+      {:beam_to_ex_ast, "~> 0.4.1"}
     ]
   end
 end

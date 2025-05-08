@@ -6,28 +6,45 @@ defmodule BeamToEx do
   defp parse_args(args) do
     {options, _, _} =
       OptionParser.parse(args,
-        switched: [beam: :string, erl: :string]
+        switches: [beam: :string, erl: :string]
       )
 
     options
+    |> Map.new()
   end
 
   def convert(options) do
     mod_beam =
-      case Keyword.has_key?(options, :erl) do
-        true ->
-          {:ok, mod_beam} = :epp.parse_file(String.to_char_list(options[:erl]), [])
+      case options do
+        %{erl: erl} ->
+          {:ok, mod_beam} = :epp.parse_file(String.to_charlist(erl), [])
           mod_beam
 
-        false ->
+        %{beam: beam} ->
           {:ok, {_, [{:abstract_code, {_, mod_beam}}]}} =
-            :beam_lib.chunks(String.to_char_list(options[:beam]), [:abstract_code])
+            :beam_lib.chunks(String.to_charlist(beam), [:abstract_code])
 
           mod_beam
+
+        _ ->
+          false
       end
 
-    mod_ast = BeamToExAst.convert(mod_beam)
-    Macro.to_string(mod_ast) |> make_pretty |> IO.puts()
+    if mod_beam do
+      mod_ast = BeamToExAst.convert(mod_beam)
+
+      code = Macro.to_string(mod_ast) |> make_pretty()
+
+      try do
+        code
+        |> Code.format_string!(migrate: true)
+        |> IO.puts()
+      rescue
+        _ -> IO.puts(code)
+      end
+    else
+      IO.puts("Either user --erl or --beam")
+    end
   end
 
   def make_pretty(ast) do
